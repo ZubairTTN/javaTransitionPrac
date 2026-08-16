@@ -5,6 +5,7 @@ package oops.encapsulation;
 Typically, we achieve encapsulation by:
 Making the class fields private
 Providing public getter/setter methods when outside code needs controlled access.*/
+// A class consists of properties/Fields/instance variable and Behavior/Methods
 public class EncapsulationTut {
     public static void main(String[] args) {
         Student s1 = new Student();

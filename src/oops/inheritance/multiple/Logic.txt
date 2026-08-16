@@ -1,0 +1,76 @@
+Multiple Inheritance
+
+Multiple inheritance means:
+
+One child inherits from multiple parents.
+
+For example:
+
+     Parent A       Parent B
+          \         /
+           \       /
+             Child
+
+In languages that support it, you could theoretically have:
+
+Dog
+ ↓
+Animal + Pet
+
+However, Java does NOT allow multiple inheritance using classes.
+
+This is invalid:
+
+class Animal {
+}
+
+
+class Pet {
+}
+
+
+class Dog extends Animal, Pet {  // ❌ ERROR
+}
+
+Why did Java designers avoid this?
+
+One major reason is the Diamond Problem.
+
+Imagine:
+
+        A
+       / \
+      B   C
+       \ /
+        D
+
+Suppose:
+
+class A {
+    void show() {
+        System.out.println("A");
+    }
+}
+
+Both B and C override show():
+
+A → show()
+
+
+B → show()
+C → show()
+
+Now D inherits from both B and C.
+
+If you write:
+
+D obj = new D();
+obj.show();
+
+Which show() should Java use?
+
+B.show()?
+        OR
+C.show()?
+
+This ambiguity is one reason Java doesn't support multiple inheritance with classes rather it supports multiple inheritance using interfaces.
