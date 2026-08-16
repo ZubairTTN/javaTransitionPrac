@@ -6,4 +6,9 @@ public class Cat extends Animal{
     {
         System.out.println("Meoowwww....");
     }
+
+    public void eat()
+    {
+        System.out.println("Cat is Eating..");
+    }
 }

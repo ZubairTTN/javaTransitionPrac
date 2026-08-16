@@ -19,3 +19,10 @@ public class Main {
         car.start();
     }
 }
+
+/* A java file can have multiple main methods in different classes */
+//class Test{
+//    public static void main(String[] args) {
+//        System.out.println("Hello!...");
+//    }
+//}

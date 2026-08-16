@@ -1,5 +1,5 @@
 package oops.polymorphism;
-public class MethodOverloading {
+public class MethodOverloadingImpl {
     public static void main(String[] args) {
         System.out.println(sum(2, 3, 4));
         System.out.println(sum(3, 9));
