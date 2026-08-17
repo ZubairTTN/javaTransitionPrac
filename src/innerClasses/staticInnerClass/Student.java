@@ -1,4 +1,4 @@
-package staticKeyword;
+package innerClasses.staticInnerClass;
 /* In Java, the static keyword is not permitted on top-level classes. If you try to declare a standalone class as static, the compiler will throw an error: modifier static not allowed here.
 However, you can declare a nested class (a class inside another class) as static. */
 // NESTED STATIC CLASS
