@@ -16,7 +16,7 @@ package oops.abstraction;
 
 public abstract class Animal {
     public abstract void makeSound();
-//    Constructor
+//    Constructor, Note: An Abstract class can have a constructor, but an interface cannot have a constructor
     protected Animal(){
         System.out.println("Constructor Called");
     }
