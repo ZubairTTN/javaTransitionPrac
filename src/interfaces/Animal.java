@@ -6,6 +6,8 @@ package interfaces;
 * 2. Static Constants
 3. Static methods - has body
 4. Default Methods - has body
+5. private methods known as helper methods
+Note: interface cannot have private static or non static fields.
 *
 Use Of Interface:
 1. To achieve multiple inheritance
@@ -23,7 +25,7 @@ Variable/constant  -    public static final
 Note: An Abstract class can have a constructor but an interface cannot have a constructor*/
 
 public interface Animal {
-    public static final int MAX_AGE = 100;
+    public static final int MAX_AGE = 100; // static constants
     public abstract void eat();
     void sleep();
 

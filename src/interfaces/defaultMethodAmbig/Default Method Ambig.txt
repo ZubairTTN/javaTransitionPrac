@@ -1,0 +1,28 @@
+default methods can create conflicts:
+
+interface A {
+    default void show() {
+        System.out.println("A");
+    }
+}
+
+
+interface B {
+    default void show() {
+        System.out.println("B");
+    }
+}
+
+If:
+class C implements A, B {
+}
+
+Java says this is ambiguous because both interfaces provide show().
+You must resolve it:
+
+class C implements A, B {
+    @Override
+    public void show() {
+        System.out.println("C");
+    }
+}

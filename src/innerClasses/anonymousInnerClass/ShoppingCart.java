@@ -49,7 +49,7 @@ class Main{
         At first glance, you might think:
         "Wait, isn't Payment an interface? How can we write new Payment()?"
         Normally: new Payment(); is illegal. You cannot directly instantiate an interface:
-        Payment p = new Payment(); // ❌
+        Payment p = new Payment(); //
         But here code is different.
         we have:
         new Payment() {
