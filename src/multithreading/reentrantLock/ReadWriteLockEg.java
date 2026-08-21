@@ -11,10 +11,9 @@ public class ReadWriteLockEg {
     private final Lock readLock = lock.readLock();
     private final Lock writeLock = lock.writeLock();
 
-    public void increment()
-    {
+    public void increment() {
         writeLock.lock();
-        try{
+        try {
             count++;
             Thread.sleep(50);
         } catch (InterruptedException e) {
@@ -24,13 +23,11 @@ public class ReadWriteLockEg {
         }
     }
 
-    public int getCount()
-    {
+    public int getCount() {
         readLock.lock();
-        try{
+        try {
             return count;
-        }
-        finally {
+        } finally {
             readLock.unlock();
         }
     }
@@ -40,8 +37,7 @@ public class ReadWriteLockEg {
         Runnable readTask = new Runnable() {
             @Override
             public void run() {
-                for(int i=1; i<=10; i++)
-                {
+                for (int i = 1; i <= 10; i++) {
                     System.out.println(Thread.currentThread().getName() + " read: " + counter.getCount());
                 }
             }
@@ -50,8 +46,7 @@ public class ReadWriteLockEg {
         Runnable writeTask = new Runnable() {
             @Override
             public void run() {
-                for (int i= 1; i<=10; i++)
-                {
+                for (int i = 1; i <= 10; i++) {
                     counter.increment();
                     System.out.println(Thread.currentThread().getName() + " Incremented");
                 }

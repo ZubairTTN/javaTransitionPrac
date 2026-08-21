@@ -1,5 +1,5 @@
 package multithreading;
-
+/* Runnable interface is an example of Functional Interface as it only has abstract run() method */
 public class HelloZubair implements Runnable{
     @Override
     public void run()

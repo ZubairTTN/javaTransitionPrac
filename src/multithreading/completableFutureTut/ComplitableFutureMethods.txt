@@ -1,0 +1,137 @@
+                    CompletableFuture
+                           |
+                           ↓
+                     Start Task
+                           |
+                 ┌─────────┴─────────┐
+                 ↓                   ↓
+           Has result?           No result?
+                 ↓                   ↓
+           supplyAsync()        runAsync()
+                 |
+                 ↓
+              Result
+                 |
+       ┌─────────┼──────────┐
+       ↓         ↓          ↓
+  thenApply  thenAccept  thenRun
+       |
+       ↓
+ Need another async operation?
+       |
+       ↓
+ thenCompose()
+       |
+       ↓
+ Another Future
+       |
+       ↓
+ Need another independent Future?
+       |
+       ↓
+ thenCombine()
+       |
+       ↓
+ Multiple Futures?
+       |
+   ┌───┴────┐
+   ↓        ↓
+allOf()   anyOf()
+   |
+   ↓
+Something goes wrong?
+   |
+   ├── exceptionally()
+   ├── handle()
+   └── whenComplete()
+   |
+   ↓
+Need timeout?
+   |
+   ├── orTimeout()
+   └── completeOnTimeout()
+
+
+
+Important Method Categories
+
+Creating
+supplyAsync()
+runAsync()
+completedFuture()
+failedFuture()
+
+Transforming
+thenApply()
+thenApplyAsync()
+Consuming
+thenAccept()
+thenAcceptAsync()
+
+Running something after completion
+thenRun()
+thenRunAsync()
+
+Chaining async operations
+thenCompose()
+thenComposeAsync()
+
+Combining two futures
+thenCombine()
+thenCombineAsync()
+thenAcceptBoth()
+thenAcceptBothAsync()
+runAfterBoth()
+runAfterBothAsync()
+
+Racing futures
+applyToEither()
+applyToEitherAsync()
+acceptEither()
+acceptEitherAsync()
+runAfterEither()
+runAfterEitherAsync()
+
+Multiple futures
+allOf()
+anyOf()
+
+Exception handling
+exceptionally()
+exceptionallyAsync()
+exceptionallyCompose()
+exceptionallyComposeAsync()
+handle()
+handleAsync()
+whenComplete()
+whenCompleteAsync()
+
+Timeout
+orTimeout()
+completeOnTimeout()
+Manual completion
+complete()
+completeExceptionally()
+completeAsync()
+
+Result retrieval
+get()
+join()
+getNow()
+resultNow()
+exceptionNow()
+
+Status
+isDone()
+isCancelled()
+isCompletedExceptionally()
+state()
+Cancellation
+cancel()
+isCancelled()
+
+Advanced
+obtrudeValue()
+obtrudeException()
+getNumberOfDependents()
+defaultExecutor()
