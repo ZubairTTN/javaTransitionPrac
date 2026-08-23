@@ -2,7 +2,7 @@ package multithreading.volatileAtomic;
 
 import multithreading.MyThread;
 
-/* In Java, volatile is a keyword used with variables to ensure visibility of changes across multiple threads. It tells the Java Virtual Machine (JVM) that a variable's value may be modified by different threads, so it should always read the latest value from main memory instead of using a cached copy. */
+/* In Java, volatile is a keyword used with variables to ensure visibility of changes across multiple threads. It tells the Java Virtual Machine (JVM) that a variable's value may be modified by different threads, so it should always read the latest value from the main memory instead of using a cached copy. */
 
 class SharedResource{
     private volatile boolean flag = false;
