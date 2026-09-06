@@ -30,7 +30,7 @@ public class IdentityHashMapDemo {
         identityHashMap.put(str2, 400);
         System.out.println("Size of Identity HashMap: " + identityHashMap.size()); // this print 2 because str1 == str2 is false as it compares the reference address contained in str1 and str2, and as both have different reference value it gives false.
         System.out.println("Identity HashMap: " + identityHashMap);
-        
+
         System.out.println(System.identityHashCode(str1));
         System.out.println(System.identityHashCode(str2));
 
