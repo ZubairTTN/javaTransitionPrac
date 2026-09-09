@@ -1,0 +1,110 @@
+HashMap
+→ Fast general-purpose Map
+
+LinkedHashMap
+→ HashMap + insertion/access order
+
+TreeMap
+→ Sorted + navigable keys
+
+WeakHashMap
+→ Weak keys + GC-sensitive entries
+
+IdentityHashMap
+→ Keys compared using ==
+
+Hashtable
+→ Legacy + synchronized
+
+ConcurrentHashMap
+→ Concurrent + hash-based
+
+ConcurrentSkipListMap
+→ Concurrent + sorted + navigable
+
+EnumMap
+→ Enum keys + efficient storage
+
+
+
+
+
+HashMap
+→ General-purpose, hash-based Map
+→ Stores key-value pairs using hashing
+→ Average O(1) for get/put/remove
+→ Allows one null key and multiple null values
+→ No guaranteed iteration order
+→ Not thread-safe
+→ Best choice for normal, single-threaded Map usage
+
+LinkedHashMap
+→ HashMap + predictable ordering
+→ Maintains insertion order by default
+→ Can also maintain access order
+→ Average O(1) for get/put/remove
+→ Allows one null key and multiple null values
+→ Useful for ordered data and LRU cache implementations
+→ Not thread-safe
+
+TreeMap
+→ Sorted and navigable Map
+→ Maintains keys in sorted order
+→ Uses a Red-Black Tree internally
+→ O(log n) for get/put/remove
+→ Supports Comparable or Comparator
+→ Provides navigation methods like lowerKey(), floorKey(),
+  ceilingKey(), higherKey()
+→ Not thread-safe
+
+WeakHashMap
+→ Map with weakly referenced keys
+→ Entries can be removed automatically by Garbage Collector
+→ Useful when map entries should not keep keys alive
+→ Useful for memory-sensitive caches and object metadata
+→ Keys are weak; values are normally strongly referenced
+→ Not thread-safe
+
+IdentityHashMap
+→ Identity-based Map
+→ Compares keys using == instead of equals()
+→ Two separate objects with equal contents can be different keys
+→ Uses object identity rather than logical equality
+→ Useful for object graphs, deep-copy algorithms and identity tracking
+→ Special-purpose Map; not commonly used for normal application data
+
+Hashtable
+→ Legacy, synchronized hash-based Map
+→ Thread-safe through synchronization
+→ Does NOT allow null keys or null values
+→ No guaranteed ordering
+→ Generally slower/less scalable than modern concurrent collections
+→ Usually replaced by HashMap or ConcurrentHashMap in modern code
+
+ConcurrentHashMap
+→ Modern, thread-safe, hash-based Map
+→ Designed for high-concurrency applications
+→ Multiple threads can access/update the map concurrently
+→ Average O(1) basic operations
+→ Does NOT allow null keys or null values
+→ Provides atomic operations like putIfAbsent(), compute(),
+  merge() and replace()
+→ Preferred for shared Map data in concurrent applications
+
+ConcurrentSkipListMap
+→ Thread-safe, sorted and navigable Map
+→ Uses a Skip List internally
+→ Expected O(log n) operations
+→ Maintains keys in sorted order
+→ Supports lowerKey(), floorKey(), ceilingKey(), higherKey()
+→ Does NOT allow null keys or null values
+→ Useful when you need both concurrency and sorted/navigation operations
+
+EnumMap
+→ Specialized Map designed specifically for enum keys
+→ Keys must belong to a single enum type
+→ Uses an efficient array-oriented internal representation
+→ Typically O(1) for basic operations
+→ Maintains keys in enum declaration/natural order
+→ Does NOT allow null keys but allows null values
+→ Useful for mapping enum constants to values or behavior

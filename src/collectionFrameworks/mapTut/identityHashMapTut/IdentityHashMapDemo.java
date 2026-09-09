@@ -1,5 +1,6 @@
 package collectionFrameworks.mapTut.identityHashMapTut;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.IdentityHashMap;
 
@@ -33,6 +34,7 @@ public class IdentityHashMapDemo {
 
         System.out.println(System.identityHashCode(str1));
         System.out.println(System.identityHashCode(str2));
+
 
 
     }
