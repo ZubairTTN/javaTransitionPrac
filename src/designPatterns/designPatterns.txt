@@ -1,0 +1,27 @@
+Design Patterns
+│
+├── Creational - How do I CREATE objects?
+│   ├── Singleton
+│   ├── Factory Method
+│   ├── Abstract Factory
+│   ├── Builder
+│   └── Prototype
+│
+├── Structural - How classes and objects are connected/combined.
+│   ├── Adapter
+│   ├── Decorator
+│   ├── Proxy
+│   ├── Facade
+│   ├── Composite
+│   ├── Bridge
+│   └── Flyweight
+│
+└── Behavioral
+    ├── Strategy
+    ├── Observer
+    ├── Command
+    ├── Template Method
+    ├── Iterator
+    ├── State
+    ├── Chain of Responsibility
+    └── ...

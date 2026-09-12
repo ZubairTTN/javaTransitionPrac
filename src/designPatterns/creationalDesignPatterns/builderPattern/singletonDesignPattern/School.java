@@ -1,4 +1,4 @@
-package singletonDesignPattern;
+package designPatterns.creationalDesignPatterns.builderPattern.singletonDesignPattern;
 
 /* The Singleton Design Pattern is a design pattern that ensures:
 A class has only one instance (object) throughout the application and provides a global access point to that instance. */
@@ -12,7 +12,7 @@ public class School {
         System.out.println("Constructor is called"); // This constructor will be called only once
     }
 
-    public static School getInstance()
+    public static synchronized School getInstance()
     {
         if(school == null)
         {
