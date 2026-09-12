@@ -18,3 +18,7 @@ public class LoggingImageProxy implements Image{
         System.out.println("[LOG] display() finished");
     }
 }
+
+/* 3. Logging Proxy
+
+Records every call before/after delegating to the real object. */
