@@ -1,4 +1,4 @@
-package designPatterns.creationalDesignPatterns.builderPattern;
+package designPatterns.creationalDesignPatterns.builderPattern.builderPattern;
 /* Think of it as:
 Builder
    |
