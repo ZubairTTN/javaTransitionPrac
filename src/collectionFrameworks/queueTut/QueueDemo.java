@@ -59,4 +59,33 @@ Queue
        +-- LinkedBlockingQueue
        +-- PriorityBlockingQueue
        +-- DelayQueue
-       +-- SynchronousQueue */
+       +-- SynchronousQueue
+
+* Collection
+   |
+   +---- Queue
+          |
+          +---- LinkedList
+          |
+          +---- PriorityQueue
+          |
+          +---- Deque
+          |      |
+          |      +---- LinkedList
+          |      +---- ArrayDeque
+          |
+          +---- BlockingQueue
+          |      |
+          |      +---- ArrayBlockingQueue
+          |      +---- LinkedBlockingQueue
+          |      +---- PriorityBlockingQueue
+          |      +---- SynchronousQueue
+          |      +---- DelayQueue
+          |
+          +---- ConcurrentLinkedQueue
+          *
+There are particularly important interfaces here:
+Queue<E>
+Deque<E>
+BlockingQueue<E>
+* */
