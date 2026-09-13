@@ -2,6 +2,8 @@ package collectionFrameworks.mapTut;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
+
 /* Map does not extend the Collection interface */
 public class HashMapTut {
     public static void main(String[] args) {
@@ -29,7 +31,7 @@ public class HashMapTut {
         }
         students.put(4, "Akshita"); // value will be replaced
 
-        students.keySet(); // this returns Set as Keys are unique
+        Set<Integer> studKeys = students.keySet(); // this returns Set as Keys are unique
         System.out.println(students.values()); // this returns Collection<String>
         System.out.println(students.entrySet());
         students.forEach((key, value) -> {

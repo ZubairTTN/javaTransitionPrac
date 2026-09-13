@@ -50,3 +50,27 @@ public class HashSetDemo {
         Collections.synchronizedSet(nums); // using this, we can make any set synchronized, not recommended
     }
 }
+
+/* HashSet
+    ↓
+Fast + Unique
+
+LinkedHashSet
+    ↓
+Fast + Unique + Insertion Order
+
+TreeSet
+    ↓
+Unique + Sorted
+
+EnumSet
+    ↓
+Unique enum values
+
+ConcurrentSkipListSet
+    ↓
+Thread-safe + Sorted
+
+CopyOnWriteArraySet
+    ↓
+Thread-safe + Read-heavy workloads */
